@@ -38,3 +38,40 @@ ryzyko sprowadzone jest do akcpetowalnego poziomu - znamy błędy występujące 
 
 10. Jaka jest różnica pomiędzy firmware, a software?
 Oba określenia mają związek z hardwarem czyli fizycznymi elementami urządzeń (np. komputer, CPU, Ram). Software jest to oprogramowanie takie jak chociażby Windows7, Saper czy MS Office które instalujemy na danym urządzeniu. Z kolei firmware jest to oprogramowanie wbudowane takie jak np. BIOS i nie może być bezpośredio odinstalowane tak jak każde inne oprogramowanie. 
+
+DRUGA DZIESIATKA PYTAŃ 
+1. Co to jest testowanie statyczne i czym różni się od testowania dynamicznego?
+Testowanie statyczne to testowanie produktu prac bez uruchamiania kodu. Testowanie dynamiczne wymaga wykonania kodu, zaś testowanie statyczne opiera się na wykonywaniu przeglądów (tj. ręcznym badaniu produktów roboczych) i analizie statycznej (tj. dokonanie oceny kodu przy pomocy narzędzi). Zarówno przeglądy i analiza statyczna nie wymagają wykonania kodu.
+
+2. Czy możliwe jest gruntowne przetestowanie systemu?
+Bardzo często pojawiające się pytanie rekrutacyjne dla testera. Pytanie dotyczy zasady testowania 'Testowanie gruntowne jest niemożliwe'. Zgodnie z nią przetestowanie wszystkiego jest możliwe, ale tylko w trywialnych przypadkach. W przeważającej większości systemów które testujemy, nie można przetestować wszystkich kombinacji. Musielibyśmy sprawdzić wszystkie wyniki decyzji, wszystkie konfiguracje, sekwencje testów itd. Nawet, gdy przetestujemy każdą znaną kombinację to następnego dnia, może pojawić się nowa nieznana dotąd konfiguracja, zmiana środowiska lub warunki testu, których jeszcze nie sprawdziliśmy.
+
+3. Co to jest test dymny (smoke test)?
+Zgodnie z definicją ze słownika wyrażeń związanych z testowaniem: "test dymny: Zestaw testów obejmujący główną funkcjonalność modułu lub systemu sprawdzający czy testowany obiekt działa poprawnie przed rozpoczęciem planowanych testów." Taki test upewnia nas, że podstawowe funkcjonalności działają poprawnie i nie ma poważnych awarii. Chodzi więc o sprawdzenie w szybki i łatwy sposób czy oprogramowanie nadaje się do dalszych testów - warto wykonywać się często i przemyśleć ich automatyzację.
+
+4. Czym charakteryzuje się model kaskadowy - czy są tam jakieś problemy związane z testowaniem?
+Model kaskadowy charakteryzuje się tym, że wszystkie czynności procesu wytwarzania oprogramowania są wykonywane oddzielnie, jedna po drugiej. Testy są wykonywane niestety dopiero na samym końcu co powoduje, że są oderwane od innych faz rozwoju oprogramowania. Ponadto testowanie jest oderwane od czynności deweloperskich i często to tester bywa pierwszą osobą, która widzi projekt w całości. Jeśli znajdziemy defekty to są one relatywnie drogie w naprawie - z drugiej strony w modelu kaskadowym nie ma miejsca na wcześniejsze testy statyczne bez uruchamiania oprogramowania.
+
+5. W jakim celu przeprowadza się testy akceptacyjne?
+Testowanie akceptacyjne to ostatni poziom testowania w ramach modelu V. Zgodnie z definicją w słowniku wyrażeń związanych z testowaniem: "testowanie akceptacyjne: Poziom testów zorientowany na ustalenie, czy zaakceptować system." Ich celem jest upewnienie się, że system jest gotowy do wydania, spełnia oczekiwania użytkownika, jest zgodny z umową / kontraktem. Testy akceptacyjne przeprowadzamy w oparciu o plan testów akceptacyjnych.
+
+6. Czy testy czarnoskrzynkowe to testy funkcjonalne czy niefunkcjonalne?
+Testowanie czarnoskrzynkowe charakteryzuje się tym, że nie mamy dostępu do wewnętrznej struktury modułu lub systemu i testy opieramy na zewnętrznym zachowaniu systemu bądź na dostępnej specyfikacji. Takie testy mogą zarówno sprawdzać charakterystykę niefunkcjonalną np. testujemy wydajność pod kątem zgodności z wymaganiami, albo np. testujemy funkcjonalność, czyli czy oprogramowanie wykonuje to co powinno.
+
+7. Quiz: Kij i Piłka
+Kij i piłka do bejsbola kosztują razem jednego dolara i dziesięć centów. Kij kosztuje o jeden dolar więcej niż piłka. Ile kosztuje piłka?
+
+To jest jedno z tych pytań, które od dawna krąży w Internecie, ale nie traci na ważności. Co więcej, częściej sprawia trudność dorosłym niż gimnazjalistom. Często, pierwszą odpowiedzią jest 10 centów - jeśli tak to niestety mylisz się.
+
+Prawidłowa odpowiedź to, piłka kosztuje 5 centów.
+
+Przypuszczam, że uznałeś, że kij i piłka kosztują razem dolara i dziesięć centów, a sam kij kosztuje dolara więcej niż piłka, więc 10 centów wydaje się oczywista bez żadnych obliczeń. Po chwili zastanowienia widać, że różnica między $1 a 10 centami wynosi 90 centów - nie 1$. A więc, jedyna opcja, żeby kij był droższy od piłki o dolara, a ich łączny koszt wynosił $1.10 to, żeby cena kija wynosiła $1.05 i cena piłki 5 centów. To samo można rozwiązać układem dwóch równań z dwiema niewiadomymi.
+
+8. Jakie są główne różnice pomiędzy dwoma metodami HTTP: GET i POST?
+Obie metody to powszechnie stosowane metody odpowiedzi na żądanie pomiędzy klientem a serwerem poprzez HTTP. GET to wysyłanie żądania danych z określonego zasobu, a POST to przesłanie danych do przetworzenia do określonego zasobu. Przy metodzie GET mówimy o ciągu zapytania (pary nazwa / wartość) który jest wysyłany w adresie URL żądania. Z kolei ciąg zapytania POST (pary nazwa / wartość) jest wysyłane już w treści wiadomości HTTP.
+
+9. Co to jest Planning Poker?
+Jest to jedna z technik szacowania pracochłonności wykonania poszczególnych zadań - często stosowana w ramach wytarzania zwinnego (agile). Zgodnie z definicją w słowniku wyrażeń związanych z testowaniem: "Planistyczny poker – technika szacowania oparta na kompromisie, zwykle używana do oszacowania nakładu pracy lub relatywnej wielkości historyjek użytkownika, wykorzystywana na ogół w zwinnym wytwarzaniu oprogramowania. Jest modyfikacją szerokopasmowej techniki delfickiej, używającą talii kart z wartościami reprezentującymi jednostki, w których zespół dokonuje szacowania."
+
+10. Co byś zrobił gdybyś spotkał wiewiórkę w swoim mieszkaniu?
+Pytanie dość niekonwencjonalne, które pokaże, czy potrafimy wykazać się opanowaniem i kreatywnością. Takie pytania z testowaniem mogą mieć niewiele wspólnego i w tym przypadku warto wykazać się poczuciem humoru. 

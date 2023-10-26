@@ -5,3 +5,36 @@ pierwsza rozmowa z rekruterem
 4. STAR
 5. Rozmowa na_nowo 
 Chyba to zaczynam rozumieć
+
+1. Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne czy jest to błąd?
+Takie pytanie pomaga określić, czy kandydat odwołuje się do jakiejkolwiek dokumentacji. A co jeśli nie mamy oficjalnej dokumentacji? Byćmoże ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie - bywają też takie odpowiedzi:) Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-up`ach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu. 
+2. Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?
+Jedno z pytań teoretycznych. Wiadomo, jest to tytuł, kroki do zreprodukowania, aktualny rezultat, wersja oprogramowania itd. Warto tutaj wskazać na konfigurację środowiska na jakim występuje błąd, czy próbowaliśmy go zreprodukować w innym środowisku, byćmoże na innej wersji językowej oraz na dokładną wersję oprogramowania z możliwym zrzutem ekranu albo filmem.
+
+3. Jak postępować z informacją, że u mnie działa?
+Co zrobimy w takiej sytuacji? Z pewnościa nie pozostawimy bez odpowiedzi:) Dobrze jest upewnić się, czy programista reprodukuje defekt na tym samym środowisku i postępuje dokładnie krok po kroku z naszymi instrukcjami. Byćmoże jest jakas nieznaczna różnica która ma wpływ na ostateczny rezultat. Zdarza się też, że programiści nie używają wersji instalacyjnej oprogramowania, ale budują je z kodu. Niezależnie od tego, o ile to oczywiście możliwe, dobrze jest testować na środowisku które jest jaknajbardziej zbliżone do tego w którym pracuje klient.
+
+4. Jakie wyróżniamy typy testów, czym się różnią?
+Często ludzie mylą rodzaje testów z poziomami testów i wymieniają tutaj testy modułowe, integracyjne, systemowe i akceptacyjne. W tym przypadku należy wymienić testy funkcjonalne (co oprogramowanie robi), niefunkcjonalne (jak oprogramowanie to robi), strukturalne (jak robi to co robi) i te związane ze zmianą (retesty + regresja).
+
+5. Od czego zależy ryzyko projektowe i co się na nie składa?
+Trzeba w tym miejscu wymienić wpływ i możliwość wystąpienia błędu. Ocena wpływu to zadanie analityka testów (business value) podczas gdy ocena możliwości wystąpienia błędu to zadanie dla technicznego analityka testów (technical impact). Dobrze jest tu także opisać jak wygląda identyfikacja ryzyk, różnice pomiędzy ryzykiem projektowym, a produktowym i co robimy żeby je zminimalizować.
+
+6. Co zrobić gdy nie jesteśmy pewni czy mamy do czynienia z błędem?
+Zawsze warto poszukać jakiś twardych dowodów na które możemy się powołać przy zgłaszaniu błędu. Niestety nie zawsze jest to jasne - i co właśnie wtedy. Można zasięgnąc wiedzy u programistów, project/product managera, product ownera i innych. Często bywa tak, że zastana sytuacja jest nie do zaakceptowania, np. oprogramowanie/strona www otwiera się minutę bądź dłużej ale nie znajdziemy w wymaganiach informacji o czasie potrzebnym na otwarcie. Pamiętajcie wtedy, że zawsze można zgłosić defekt powołując się na użytkownika ze zdrowym rozsądkiem (tzw. 'reasonable end user') który najnormalniej nie będzie czekał.
+
+7. Różnica między weryfikacją a walidacją
+Weryfikacja sprawdza czy produkt jest zaprojektowany właściwie i odbywa się już od samego początku procesu rozwoju oprogramowania. Z kolei walidacja określa czy system posiada funkcje określone w wymaganiach a w szczególności czy spełniają one wymagania klienta. Weryfikacja odpowiada nam na pytanie "Czy właściwie budujemy nasz produkt?", a walidacja "Czy budujemy właściwy produkt"?
+
+8. Czy tester jest odpowiedzialny za jakość oprogramowania?
+Tak i nie, to znaczy bezpośrednio jego praca polega na sprawdzaniu czy w oprogramowaniu występują błędy ale on ich nie naprawia i nie decyduje o wydaniu oprogramowania na rynek. Jak nie tester to kto? Można się tu skłonić ku stwierdzeniu, żę jest odpowiedzialny za jakoś softu na równi z programistami. Jednak tak naprawdę wszyscy zaangażowani w proces wytwarzania oprogramowania są odpowiedzialni za produkt końcowy. Co z tego, że znajdziemy błędy oprogramowania jeśli ich nie naprawimy i produkt z błędami zostanie świadomie wydany na rynek.
+
+9. Kiedy należy skończyć testować oprogramowanie? Podaj przykłady.
+wystarczające pokrycie wymagań - wykonaliśmy poprawnie 95% testów pokrywających wszystkie wymagania,
+zagęszczenie defektów - występuje nie więcej niż 5 defektów przypisanych do każdego z rozdziału wymagań,
+koszt - testy trwają już 2 miesiące i nie możemy sobie pzwolić na dalsze testy,
+ramy czasowe - testy są przewidziane na 3 miesiące i ani dnia dłużej,
+ryzyko sprowadzone jest do akcpetowalnego poziomu - znamy błędy występujące w oprogramowaniu i je akceptujemy
+
+10. Jaka jest różnica pomiędzy firmware, a software?
+Oba określenia mają związek z hardwarem czyli fizycznymi elementami urządzeń (np. komputer, CPU, Ram). Software jest to oprogramowanie takie jak chociażby Windows7, Saper czy MS Office które instalujemy na danym urządzeniu. Z kolei firmware jest to oprogramowanie wbudowane takie jak np. BIOS i nie może być bezpośredio odinstalowane tak jak każde inne oprogramowanie. 

@@ -6,6 +6,8 @@ pierwsza rozmowa z rekruterem
 5. Rozmowa na_nowo 
 Chyba to zaczynam rozumieć
 
+PIERWSZA DZISIĘTKA
+
 1. Skąd wiemy, że aktualne zachowanie oprogramowania jest poprawne czy jest to błąd?
 Takie pytanie pomaga określić, czy kandydat odwołuje się do jakiejkolwiek dokumentacji. A co jeśli nie mamy oficjalnej dokumentacji? Byćmoże ze względu na swoje doświadczenie i znajomość oprogramowania to tester określa co jest dobre a co nie - bywają też takie odpowiedzi:) Często w projektach agile dokumentacja jest na tyle uboga, że np. obecność na codziennych stand-up`ach to główne źródło wiedzy o aktualnych zmianach w oprogramowaniu. 
 2. Na co nalezy zwrócić uwagę przy zgłaszaniu błędu?
